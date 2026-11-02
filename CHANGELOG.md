@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1 (2026-11-09)
+
+- **`SOUL.md`:** Big Head now knows about GeniusHQ, IDuh Genius's other agent from the Genius pack, and that in the story it's the HQ he reports to. That's character, not a connection. SHA-256 `dd72b30880d51da66745dc018ff38c9534ea6a793cfeff822892b0303740362f`.
+- **`config.yaml`:** no changes, so `hermes profile update bighead` is all you need.
+
 ## 0.1.0 (2026-11-01)
 
 The first pack.

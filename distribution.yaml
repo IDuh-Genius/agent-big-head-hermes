@@ -1,5 +1,5 @@
 name: bighead
-version: 0.1.0
+version: 0.1.1
 description: "Agent Big Head by IDuh Genius: a quick, candid AI agent for your own Discord, running on your own Hermes Agent."
 hermes_requires: ">=0.22.5"
 author: "IDuh Genius"

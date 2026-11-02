@@ -2,7 +2,9 @@
 
 Agent Big Head is a quick, candid AI agent from IDuh Genius. This pack turns your own copy of Hermes Agent into Big Head and puts him in your own Discord. He runs on your computer, on the AI model you choose. Out of the box, he can talk, search the web and keep notes, but he can't run commands or touch your files.
 
-**Early release (v0.1.0).** If something here doesn't work the way this page says, tell us. That's a bug, not you.
+Would you rather talk to a more buttoned-up agent? The [Genius pack](https://github.com/joshuajudd-usa/geniushq-hermes) gives you GeniusHQ instead, or you can run both as two separate bots.
+
+**Early release (v0.1.1).** If something here doesn't work the way this page says, tell us. That's a bug, not you.
 
 ## What's in the pack
 
