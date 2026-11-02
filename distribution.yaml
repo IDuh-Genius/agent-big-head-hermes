@@ -1,0 +1,13 @@
+name: bighead
+version: 0.1.0
+description: "Agent Big Head by IDuh Genius: a quick, candid AI agent for your own Discord, running on your own Hermes Agent."
+hermes_requires: ">=0.22.5"
+author: "IDuh Genius"
+license: "LicenseRef-Agent-Big-Head-Pack (see LICENSE)"
+env_requires:
+  - name: DISCORD_BOT_TOKEN
+    description: "Your own Discord bot's token, from the Discord Developer Portal. Treat it like a password."
+    required: true
+  - name: DISCORD_ALLOWED_USERS
+    description: "Your own Discord user ID. Big Head ignores everyone else. Anyone you add can use every tool he has."
+    required: true
