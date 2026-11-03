@@ -1,8 +1,8 @@
 # Changelog
 
-## 0.1.1 (2026-11-09)
+## 0.1.1 (2026-11-03)
 
-- **`SOUL.md`:** Big Head now knows about GeniusHQ, IDuh Genius's other agent from the Genius pack, and that in the story they're the HQ he reports to. That's character, not a connection. SHA-256 `3ce441c31619913e19bb75c1789acbfff99c2e155bc9bc3d1323bf9a2a9a612e`.
+- **`SOUL.md`:** Big Head now knows about GeniusHQ, IDuh Genius's other agent from the Genius pack, and that in the story they're the HQ he reports to. That's character, not a connection. He also knows about the four Intelligence Big Heads (Brilliantist, Diabolicist, Mastermind and Conspiricist), new profile pictures on the setup page. SHA-256 `0c112bd6984220a189cbfe8f55b2a6ee2dffe29b2d38b446d9a125717be5d9ca`.
 - **`config.yaml`:** no changes, so `hermes profile update bighead` is all you need.
 
 ## 0.1.0 (2026-11-01)
