@@ -7,7 +7,23 @@
 # memory, a to-do list and searching his past chats. No terminal, files, code, browser,
 # subagents or scheduled jobs. Add more with `bighead tools`, and read the README first.
 platform_toolsets:
-  discord: [web, vision, clarify, memory, todo, session_search]
+  discord: [web, vision, clarify, memory, todo, session_search, mcp-iduh-genius]
+
+# IDuh Genius MCP (optional). Off until you turn it on: set enabled to true, then run /reload-mcp.
+# When on, Discord gets every tool this server offers your account (read and add to your Scatterplot inbox;
+# no edit or delete). Read docs/iduh-mcp.md first. The pack needs no account until you switch this on.
+mcp_servers:
+  iduh-genius:
+    url: "https://mcp.iduhgenius.com/mcp"
+    enabled: false
+    auth: oauth
+    oauth:
+      client_id: "7eb1b5a9-6fbd-43d3-8f7c-42797658c68e"
+      redirect_port: 27890
+    tools:
+      prompts: false
+      resources: false
+
 
 agent:
   max_turns: 30                # at most 30 rounds of tool use per message, then he wraps up. Not a spending limit

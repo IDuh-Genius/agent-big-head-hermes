@@ -1,0 +1,54 @@
+# Connecting Big Head to your IDuh Genius apps (optional, off by default)
+
+This is an optional add-on. The pack works fully without it, and it stays off until you turn it on yourself.
+
+## What it does
+
+The IDuh Genius MCP server (`https://mcp.iduhgenius.com/mcp`) lets Big Head read and add to the Scatterplot inbox of an IDuh Genius account you sign in to. Today that means:
+
+- **Read:** list, search, and open items in your Scatterplot inbox (`scatterplot.read`).
+- **Add:** add a note, a link, or a transcript you gave him as text (`scatterplot.capture:write`).
+
+He cannot edit, file, dismiss, or delete anything, and he has no tool to send messages or spend money.
+
+## Before you start
+
+- You need an IDuh Genius account (GeniusID) and a Scatterplot inbox. Without them, leave this off.
+- Big Head's GeniusID client is registered (public, no secret). The two grants must be added to it on the GeniusID side before sign-in works for those scopes.
+- Anything Big Head reads from your inbox is your own captured content. He treats it as data, never as instructions.
+
+## Turning it on
+
+1. Use the Big Head client ID below. It is public and has no secret.
+2. In `config.yaml`, set `enabled: true` on the `iduh-genius` server. The block is already there, with the tools turned on for Discord.
+3. Run `/reload-mcp` in Hermes, then sign in when Hermes asks.
+4. Check the consent card: it must list "Read and search your Scatterplot inbox" and, if you want him to add items, "Add notes, links and transcripts". Approve only what you want.
+
+The shipped `config.yaml` already has the block, with `enabled: false`:
+
+```yaml
+mcp_servers:
+  iduh-genius:
+    url: "https://mcp.iduhgenius.com/mcp"
+    enabled: false
+    auth: oauth
+    oauth:
+      client_id: "<client id>"
+      redirect_port: <port>
+```
+
+The field names match the Hermes MCP reference (`auth`, `oauth.client_id`, `oauth.redirect_port`). Discord gets the server's tools through the `mcp-iduh-genius` toolset in `platform_toolsets`. Hermes 0.23 accepts `mcp-iduh-genius` in `platform_toolsets` once the server is defined in `mcp_servers`, which the shipped config does. That checks the config, not the live tools: after you enable the server, ask in Discord what tools you have, and confirm the IDuh tools appear.
+
+## Turning it off
+
+Set `enabled: false` again and run `/reload-mcp`. To revoke the sign-in, open Connected apps on id.iduhgenius.com and disconnect it. That ends every token for this client.
+
+## What Big Head can and cannot do through it
+
+- Can: read and search your inbox, open items, and add notes, links, or transcripts you give him.
+- Cannot: edit, file, dismiss, delete, upload files, change tags or placement, or send anything.
+- Every added item records that Big Head wrote it.
+
+## Status
+
+Draft for review. Not in the 0.1.0 release. Pack release waits for Joshua's go.
