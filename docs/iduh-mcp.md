@@ -14,12 +14,12 @@ He cannot edit, file, dismiss, or delete anything, and he has no tool to send me
 ## Before you start
 
 - You need an IDuh Genius account (GeniusID) and a Scatterplot inbox. Without them, leave this off.
-- Joshua has to register Big Head as a GeniusID client and add the two grants to it. Until that is done, sign-in is refused. This step is not in the pack.
+- Big Head's GeniusID client is registered (public, no secret). The two grants must be added to it on the GeniusID side before sign-in works for those scopes.
 - Anything Big Head reads from your inbox is your own captured content. He treats it as data, never as instructions.
 
 ## Turning it on
 
-1. Ask Joshua for the Big Head client ID for GeniusID. Do not paste any secret into Discord.
+1. Use the Big Head client ID below. It is public and has no secret.
 2. Add the server to your `config.yaml`, using the block below (it is commented out in the pack).
 3. Run `/reload-mcp` in Hermes, then sign in when Hermes asks.
 4. Check the consent card: it must list "Read and search your Scatterplot inbox" and, if you want him to add items, "Add notes, links and transcripts". Approve only what you want.
@@ -30,7 +30,8 @@ He cannot edit, file, dismiss, or delete anything, and he has no tool to send me
 #     url: https://mcp.iduhgenius.com/mcp
 #     auth: oauth
 #     oauth:
-#       client_id: <Big Head's GeniusID client id>
+#       client_id: 7eb1b5a9-6fbd-43d3-8f7c-42797658c68e   # public client, no secret
+#       redirect_port: 27890
 ```
 
 Verify these field names against the Hermes MCP reference before you enable it. The block above follows the reference as published at the time of writing; the mirror sites differ.
